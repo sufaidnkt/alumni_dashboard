@@ -1,0 +1,7 @@
+name =  M - Chat
+description = m-chat
+core = 7.x
+package = "Affiliate"
+
+
+version = '7-x-1.0'

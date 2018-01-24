@@ -1,0 +1,4 @@
+name =  SSM alumni
+description = Alumni 
+core = 7.x
+package = "alumni"

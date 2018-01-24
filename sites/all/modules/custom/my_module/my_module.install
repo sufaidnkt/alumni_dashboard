@@ -1,0 +1,26 @@
+<?php
+
+
+function my_module_schema() {
+  $schema['afl_variable'] = array(
+    'description' => 'Variable table',
+    'fields' => array(
+      'name' => array(
+        'description' => 'The name of the variable.',
+        'type' => 'varchar',
+        'length' => 250,
+        'not null' => TRUE,
+        'default' => 'default',
+      ),
+      'value' => array(
+        'description' => 'The value of the variable.',
+        'type' => 'blob',
+        'not null' => TRUE,
+        'size' => 'big',
+        'translatable' => TRUE,
+      ),
+    ),
+    'primary key' => array('name'),
+  );
+  return $schema;
+}

@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* CSS Document */
+
+.clearfix:before,.clearfix:after{content:" ";display:table}
+.clearfix:after{clear:both}
+.clearfix{zoom:1}
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+
+
+@font-face {
+    font-family: 'robotoblack';
+    src: url('../fonts/roboto-black-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'roboto_condensedbold';
+    src: url('../fonts/robotocondensed-bold-webfont.woff2') format('woff2'),
+         url('../fonts/robotocondensed-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'roboto_condensedlight';
+    src: url('../fonts/robotocondensed-light-webfont.woff2') format('woff2'),
+         url('../fonts/robotocondensed-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url('../fonts/robotocondensed-regular-webfont.woff2') format('woff2'),
+         url('../fonts/robotocondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotothin';
+    src: url('../fonts/roboto-thin-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+
+
+body{margin:0 auto;font-family: 'robotoregular';}
+.wrapper-all{min-width:320px;overflow: hidden;}
+.wrapper-inner{width: 100%;max-width:1200px;margin: auto;}
+
+
+
+
+
+.main-bg{background: url(../img/main-background.jpg)no-repeat;background-size: cover;width: 100%;height: auto;min-height: 1200px;}
+.wrapper-intro{background: #fff;padding: 16px;}
+
+.wrapper-intro h2{color: #3a6da7; padding-bottom: 12px;font-size: 30px;font-family: 'robotobold';margin: 0;}
+.wrapper-intro .contact-form-wrapper{padding-top: 40px;}
+.wrapper-intro .contact-form-wrapper input[type="text"]{width: 100%;height: 45px;border: 1px solid #dedede;padding: 8px;margin-bottom: 12px}
+.wrapper-intro .contact-form-wrapper textarea{width: 100%;height: 114px;border: 1px solid #dedede;padding: 8px;margin-bottom: 12px}
+.wrapper-intro .contact-form-wrapper #edit-join-with-us{width: 160px;height: 44px;float: left;background: #3a6da7;line-height: 31px;margin-left: 17px;border : none;}
+.wrapper-intro .contact-form-wrapper .btn-default, .wrapper-contacts .webform-submit{width: 160px;height: 44px;float: right;background: #333;color: #fff;line-height: 31px;border-color: #333;margin-right: 12px;border : none;}
+
+.wrapper-intro .contact-form-wrapper #webform-client-form-75 #edit-join-with-us {
+	display: inline-block;
+	width: 34%;
+	margin-left: 20px;
+    background: #3a6da7;color: #fff;border-color: #3a6da7;
+}
+
+
+
+.wrapper-intro .contact-form-wrapper .contact-us-form .form-actions {
+	display: inline-block;
+	text-align: right;
+	width: 60%;
+	margin: 0;
+}
+
+.wrapper-intro .contact-form-wrapper #webform-client-form-75 .webform-submit.button-primary.form-submit {
+	display: inline-block;margin: 0 5px;
+}
+
+
+
+
+
+
+
+.wrapper-about-courses{background: #3a6da6;padding: 38px;color: #fff;}
+.wrapper-about-courses h2{border-bottom: 1px solid #cbcbcb;padding-bottom: 12px;font-size: 30px;font-family: 'robotobold';}
+.wrapper-about-courses p{padding: 22px 0 0 0;line-height: 20px;font-size:14px;}
+.wrapper-about-courses a, .wrapper-about-compensation a{background: #3a6da7;border-color: #fff;margin: 0;}
+
+.wrapper-about-compensation{background:#ede9e9;color: #626363;padding: 38px;opacity: 0.9;}
+.wrapper-about-compensation h2{color: #3a6da7; padding-bottom: 12px;font-size: 30px;font-family: 'robotobold';}
+.wrapper-about-compensation p{padding: 22px 0 0 0;line-height: 20px;font-size:14px;}
+
+.wrapper-about-compensation ul{padding: 0;margin: 0;}
+.wrapper-about-compensation ul li{list-style: none;padding: 7px 4px;}
+.abt-cn {width: 15px;height: 15px; display: inline-block; margin: 5px;}
+
+.projects-load-more a:hover{background: #333 !important;}
+
+
+
+.wrapper-contacts{background:#faf9f8;padding: 38px;opacity: 0.9;}
+.wrapper-contacts h2{color: #3a6da7; padding-bottom: 12px;font-size: 30px;font-family: 'robotobold';padding-left: 12px;}
+.wrapper-contacts input[type="text"]{width: 100%;height: 45px;border: 1px solid #dedede;padding: 8px;margin-bottom: 20px}
+.wrapper-contacts textarea{width: 100%;height: 114px;border: 1px solid #dedede;padding: 8px;margin-bottom: 12px}
+.wrapper-contacts .btn-primary{float: right;}
+
+.wrapper-contacts .contact-us-form input, .contact-form-wrapper .contact-us-form input {border: 1px solid #ccc;height: 47px;}
+
+
+
+.wrapper-video-detail{background: #faf9f8;padding: 20px;}
+
+.video-heads{background:#3a6da6;padding: 40px;}
+.video-heads h4{font-size: 20px;color: #fff;line-height: 30px;}
+.video-details-inner{padding: 20px 0;}
+.video-details-inner img{width: 100%;height: auto;max-width: 1200px;}
+.video-detail-submit{text-align: center;}
+
+
+
+a.vid-detail-btn {background: #db3822;border-radius: 2px;color: #fff; display: inline-block; line-height: 35px;padding: 20px 35px; text-align: center;text-transform: capitalize;
+    font-size: 15px;text-decoration: none;font-family: 'robotobold';}
+
+
+
+
+.wrapper-copy-link{background: #3a6da6;padding: 38px;}
+.wrapper-copy-link h2{color: #faf9f8; padding-bottom: 12px;font-size: 30px;font-family: 'robotobold';}
+.wrapper-copy-link a{color: #fff;}
+.wrapper-copy-link a.btn.btn-primary {color: #fff;background: #333;padding: 7px 14px;border : none;}
+
+.wrapper-social-link{background: #3e74b3;padding:0 38px;}
+
+
+
+
+.wrapper-about-courses .btn.btn-primary, .wrapper-about-compensation .btn.btn-primary, .contact-form-wrapper #webform-client-form-75 .webform-submit.button-primary.form-submit{
+	padding: 10px 17px;
+	margin: 10px 0;
+	float: dis;
+	display: inline-block;
+	color: #fff;
+    background: #333;
+    border : none;
+}
+
+
+
+.edit-landing-content {
+	background: #3a6da6;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	line-height: 34px;
+	color: #fff;
+	border-radius: 50%;
+	border: 1px solid #fff;
+    float: right;
+}
+
+.landing-social-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: #fff;
+    text-align: center;
+    line-height: 41px;
+    margin: 20px 4px;
+    border-radius: 50%;
+}
+
+.social-icons li {
+    float: left;
+    list-style: none;
+}
+.landing-social-icon a {
+    color: #337ab7;
+    font-size: 18px;
+}
+
+
+.contact-form-wrapper #webform-client-form-2 .form-email {width: 100%; height: 44px;border: 1px solid #ccc; padding: 5px;}
+
+.contact-form-wrapper #webform-client-form-2 .wrapper-intro .contact-form-wrapper textarea {
+    border: 1px solid #ccc !important;   }
+
+.wrapper-contacts #webform-client-form-2 .form-email {height: 44px;border: 1px solid #ccc; padding: 5px;}
+
+@media only screen and (max-width:680px) {
+    .wrapper-intro .video-wrapper iframe {width: 100%;height: auto;}
+    
+}
+
+@media only screen and (max-width:480px) {
+
+    .wrapper-copy-link a{display: inline-block;}
+    .wrapper-intro .contact-form-wrapper #webform-client-form-75 #edit-join-with-us {display: block;width: 50%;margin: 10px auto;}
+    .wrapper-intro .contact-form-wrapper .contact-us-form .form-actions {display: block;width: 60%;margin: 10px auto;}
+    .wrapper-intro .contact-form-wrapper #webform-client-form-75 .webform-submit.button-primary.form-submit {display: block;}
+    
+}

@@ -1,0 +1,27 @@
+<?php 
+
+/**
+ * -----------------------------------------------------
+ * Hook menu
+ * -----------------------------------------------------
+*/
+	function m_chat_menu(){
+		$items = array();
+		$items['test-code1'] = array(
+	    'title' => 'Test Codes',
+	    'page callback' => 'test_codes1',
+	    'access callback' => TRUE,
+	    'type' => MENU_CALLBACK,
+	  );
+	 
+	  return $items;
+	}
+
+function test_codes1 () {
+	return 'aaa';
+	
+}
+
+function m_chat_form_alter ($form, &$form_state, $form_id) {
+
+}

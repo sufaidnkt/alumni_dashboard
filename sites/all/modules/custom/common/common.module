@@ -1,0 +1,150 @@
+<?php 
+/*
+ * ----------------------------------
+ * Hook Menu
+ * ----------------------------------
+*/
+	function common_menu () {
+		$items['afl/dashboard'] = array(
+	    'title' => t('Overview'),
+	    'page callback' => 'afl_dashboard',
+	    'access arguments' => array('afl_dashboard'),
+	  );
+	  $items['admin/advanced-config'] = array(
+	    'title' => t('Advanced System Configurations'),
+	    'description' => t('Advanced system configurations goes here'),
+	    'page callback' => 'drupal_get_form',
+	    'page arguments' => array('afl_advanced_config'),
+	    'access arguments' => array('afl_advanced_configurations'),
+	    'file' => 'inc/common.advanc.inc',
+	    'file path' => drupal_get_path('module', 'common'),
+  );
+
+	  return $items;
+	}
+
+
+	function afl_dashboard () {
+		return '';
+	}
+/*
+ * ----------------------------------
+ * Hook Permision
+ * ----------------------------------
+*/
+	function common_permission () {
+		return [
+			'afl_dashboard' => [
+				'title' => t('Custom Dashboard'),
+	      'description' => t('Custom Dashboard'),
+			],
+			'afl_advanced_configurations' => [
+				'title' => t('Advanced Configuration'),
+	      'description' => t('Advanced admin Configuration'),
+			],
+		];
+	}
+
+
+
+function common_user_login ( &$edit, $account ) {
+	 $edit['redirect'] = 'afl/dashboard';
+}
+
+
+function afl_inc_file($type, $module, $name = NULL) {
+  static $files = array();
+
+  if (!isset($name)) {
+    $name = $module;
+  }
+
+  $key = $type . ':' . $module . ':' . $name;
+  if (isset($files[$key])) {
+    return $files[$key];
+  }
+  if(! $name || !$type || !$module){
+    drupal_set_message(t('Can not include the files. Information missing, file: @file, Module: @module, Type: @type', array('@type' => $type, '@module' => $module,  '@file' => $name)));
+    return FALSE;
+  }
+
+  if (function_exists('drupal_get_path')) {
+
+    $file = DRUPAL_ROOT . '/' . drupal_get_path('module', $module) . "/$name.$type";
+    
+    require_once $file;
+    $files[$key] = $file;
+    return $file;
+  }
+  return FALSE;
+}
+
+
+
+function pr( $data = '', $ex = FALSE ) {
+	echo '<pre>';
+	print_r($data);
+	echo '</pre>';
+	if ( $ex) {
+		exit();
+	}
+}
+
+function afl_variable_get($name, $default = NULL) {
+  $value = db_select('afl_variable', 'variable')
+    ->fields('variable', array('value'))
+    ->condition('name', $name,'=')
+    ->execute()->fetchField();
+  if($value){
+    return unserialize($value);
+  }
+  else{
+    return $default;
+  }
+}
+
+function afl_variable_set($name, $value) {
+  db_merge('afl_variable')
+  ->key(array(
+    'name' => $name,
+    ))
+  ->fields(array('value' => serialize($value)))->execute();
+
+}
+
+function afl_date(){
+  $afl_testing_date = REQUEST_TIME;
+  $afl_enable_test_mode = afl_variable_get('afl_enable_test_mode', FALSE);
+  $afl_enable_test_date = afl_variable_get('afl_enable_test_date', FALSE);
+  if($afl_enable_test_mode && $afl_enable_test_date){
+    $afl_testing_date = strtotime(afl_variable_get('afl_testing_date'));
+  }
+  return $afl_testing_date;
+}
+
+function afl_date_splits($rdate, $duration = ''){
+  $date_splits = array();
+  if(! $rdate){
+    $rdate = afl_date();
+  }
+  if($duration != ''){
+    $new_date = strtotime($duration, $rdate);
+    $date_splits['y'] = date('Y', $new_date);
+    $date_splits['m'] =  date('m', $new_date);
+    $date_splits['d'] = date('d', $new_date);
+    $date_splits['w'] = date('W', $new_date);
+    $date_splits['D'] = date('D', $new_date);
+  }else{
+    $date_splits['y'] = date('Y', $rdate);
+    $date_splits['m'] =  date('m',$rdate);
+    $date_splits['d'] = date('d', $rdate);
+    $date_splits['w'] = date('W', $rdate);
+    $date_splits['D'] = date('D', $rdate);
+  }
+  return $date_splits;
+
+}
+
+function afl_date_combined($date_splits){
+  return $date_splits['y'].'/'.$date_splits['m'].'/'.$date_splits['d'];
+}

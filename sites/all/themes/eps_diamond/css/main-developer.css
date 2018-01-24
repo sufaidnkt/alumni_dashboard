@@ -1,0 +1,461 @@
+/* job-details-wrapper*/
+.job-details-wrapper h3{color:#36464e;font-size:20px;font-family:"Source Sans Pro","Helvetica Neue";padding-bottom:15px;font-weight:bold;}
+.job-details-wrapper .panel{background:0 0;border:none;}
+.job-details-wrapper .panel .panel-heading{background:#f6f5f5;border:1px solid #c3c4c5;}
+.job-details-wrapper .panel .job-details-left-info{float:left;}
+.job-details-wrapper .panel .job-details-left-info ul{display:inline-block;margin-right:15px;vertical-align:middle;padding:15px;border:1px solid #b7b7b7;border-radius:5px;margin-bottom:0;background:#fff;}
+.job-details-wrapper .panel .job-details-left-info ul.target-days{border:1px solid #61ab00;}
+.job-details-wrapper .panel .job-details-left-info ul.target-days li,.job-details-wrapper .panel .job-details-left-info ul.target-days li span{color:#61ab00;}
+.job-details-wrapper .panel .job-details-left-info ul li{display:inline-block;vertical-align:middle;border-right:solid 1px #d2d0d0;padding:0 10px;text-align:center;color:#333;font-size:14px;}
+.job-details-wrapper .panel .job-details-left-info ul li span{display:block;color:#36464e;font-size:18px;font-family:"Source Sans Pro","Helvetica Neue";font-weight:bold;}
+.job-details-wrapper .panel .job-details-left-info ul li:last-child{border:none;}
+.job-details-wrapper .panel .job-details-right-info{float:right;}
+.job-details-wrapper .panel .job-details-right-info a.red-main-btn{width:200px;height:50px;text-align:center;line-height:50px;color:#fff;text-decoration:none;background:#b70000;display:block;border-radius:5px;font-size:18px;font-family:"Source Sans Pro","Helvetica Neue";margin:13px 0;}
+.job-details-wrapper .panel .panel-body{background:#fff;border:1px solid #c3c4c5;border-top:none;}
+.job-details-wrapper .panel .panel-body .job-details h4{color:#36464e;font-size:18px;padding-bottom:15px;font-family:"Source Sans Pro","Helvetica Neue";font-weight:bold;}
+.job-details-wrapper .panel .panel-body .job-details .exp-text{padding-bottom:15px;}
+.job-details-wrapper .panel .panel-body .job-details dl{font-size:14px;margin:0;}
+.job-details-wrapper .panel .panel-body .job-details dl dt{color:#282828;font-weight:400;vertical-align:middle;display:inline-block;}
+.job-details-wrapper .panel .panel-body .job-details dl dt:after{content:':';width:3px;height:10px;}
+.job-details-wrapper .panel .panel-body .job-details dl dd{color:#848788;vertical-align:middle;display:inline-block;}
+.job-details-wrapper .panel .panel-body .job-details .about-employer{padding-top:20px;}
+.job-details-wrapper .panel .panel-body .job-details .about-employer ul li{display:inline-block;vertical-align:middle;list-style:none;}
+.job-details-wrapper .panel .panel-body .job-files{margin-top:20px;}
+.job-details-wrapper .panel .panel-body .job-files .item-list li{ float: left; border: solid 1px #ccc; padding: 7px;}
+.job-details-wrapper .panel .panel-body .job-files .item-list li+li{ margin-left: 10px;}
+  /* END -> job-details-wrapper*/
+/*support-bid-request*/
+.view-support-bid-request .view-content .panel {background: none;padding: 0;border: none;box-shadow: none;}
+.view-support-bid-request .view-content .panel-body {padding: 0;background: none;}
+.view-support-bid-request .view-content .table-responsive table {border: solid 1px #c3c4c5;background: #fff;}
+.view-support-bid-request .view-content .table-responsive table thead {border: solid 1px #36464e;}
+.view-support-bid-request .view-content .table-responsive table thead tr {border: none;}
+.view-support-bid-request .view-content .table-responsive table thead tr th {background: #36464e;padding: 15px;color: #fff;font-size: 13px;color: #fff;font-weight: normal;text-transform: uppercase;border-right: solid 1px #40535c;}
+.view-support-bid-request .view-content .table-responsive table .media-body{width: auto;}
+.view-support-bid-request .view-content .table-responsive table tbody tr th {font-weight: normal;border-right: solid 1px #d2d0d0;}
+.view-support-bid-request .view-content .table-responsive table tbody tr td {padding: 10px 15px;border-right: solid 1px #d2d0d0;vertical-align: middle;}
+.view-support-bid-request .view-content .table-responsive table tbody tr td .label {font-weight: normal;}
+.view-support-bid-request .view-content .table-responsive table tbody tr td .label.label-info {background: #12afcb;}
+.view-support-bid-request .view-content .table-responsive table tbody tr td .label.label-primary {background: #7a6fbe;}
+.view-support-bid-request .view-content .table-responsive table tbody tr td .label.label-success {background: #22baa0;}
+.view-support-bid-request .view-content .table-responsive table tbody tr td .label.label-danger {background: #f25656;}
+.view-support-bid-request .view-content .table-responsive table tbody tr td .label.label-warning {background: #f6d433;}
+.view-support-bid-request .view-content .table-responsive table tbody tr td .progress {margin: 3px 0 0;height: 10px;border-radius: 0;}
+.view-support-bid-request .view-content .table-responsive table tbody tr td .progress .progress-bar {background-color: #7a6fbe;}
+.region.region-announcements{background-color: #c8edf4;color: #555;margin: 10px 30px;padding: 10px 30px;}
+/* END -> support-bid-request*/
+.mt-0.mb-0{margin-top: 0px;margin-bottom:0px;}
+#copy-left-url, #copy-right-url{width:130px;}
+.nav.menu-navigation .fa.fa-briefcase{color: #23b7e5}
+/* Profile */
+
+#edit-actionafl-reject-payout{background-color: #58666e;border-color: #58666e; color: #ffffff !important;}
+
+.position-settings.btn{padding:6px; font-size:12px;}
+
+.username-hide-show{display:none;}
+
+fieldset.collapsed {background-color: transparent;}
+html.js fieldset.collapsed {border-width: 1px;height: auto; }
+html.js fieldset.collapsed div.fieldset-wrapper{display: none;}
+a.tabledrag-handle .handle{width:23px; height:22px;}
+.tabledrag-changed-warning.messages.warning{background-color:yellow; padding:10px;}
+.menu-enabled.draggable.odd{background-color: #FFFAF0;}
+
+.profile-cover {background: url('../img/profile-cover.png');background-size: cover;width: 100%;height: 300px;position: relative;}
+.profile-image {position: absolute;margin: 200px 20px 20px 20px;}
+.profile-image img {display: block;margin: 0 auto;width: 150px;-webkit-box-shadow: 0 0 0 5px #fff;-moz-box-shadow: 0 0 0 5px #fff;-o-box-shadow: 0 0 0 5px #fff;box-shadow: 0 0 0 5px #fff;}
+.profile-info {position: absolute;bottom: 10px;right: 20px;padding: 0;margin: 0;text-align: right;}
+.profile-info-value {color: #fff;display: inline-block;margin-left: 40px;}
+.user-profile {margin-top: 60px;}
+.team .team-member {display: block;overflow: hidden;margin-bottom: 10px;float: left;position: relative;}
+.team .team-member .online {top: 5px;right: 5px;}
+.team .team-member img {width: 40px;float: left;border-radius: 50%;margin: 0 5px 0 5px;}
+.team .more-members a {display: block;text-align: center;}
+.profile-timeline ul li .timeline-item-header {width: 100%;overflow: hidden;}
+.profile-timeline ul li .timeline-item-header img {width: 40px;height: 40px;float: left;margin-right: 10px;border-radius: 50%;}
+.profile-timeline ul li .timeline-item-header p {margin: 0;color: #000;font-weight: bold;}
+.profile-timeline ul li .timeline-item-header p span {margin: 0;color: #8E8E8E;font-weight: normal;}
+.profile-timeline ul li .timeline-item-header small {margin: 0;color: #8E8E8E;}
+.profile-timeline ul li .timeline-item-post {padding: 20px 0 0 0;position: relative;}
+.profile-timeline ul li .timeline-item-post > img {width: 100%;}
+.timeline-options {overflow: hidden;margin-top: 20px;margin-bottom: 20px;border-bottom: 1px solid #f1f1f1;padding: 10px 0 10px 0;}
+.timeline-options a {display: block;margin-right: 20px;float: left;color: #333;text-decoration: none;}
+.timeline-options a i {margin-right: 3px;}
+.timeline-options a:hover {color: #22BAA0;}
+.timeline-comment {overflow: hidden;margin-bottom: 10px;width: 100%;border-bottom: 1px solid #f1f1f1;padding-bottom: 5px;}
+.timeline-comment .timeline-comment-header {overflow: hidden;}
+.timeline-comment .timeline-comment-header img {width: 30px;border-radius: 50%;float: left;margin-right: 10px;}
+.timeline-comment .timeline-comment-header p {color: #000;float: left;margin: 0;font-weight: bold;}
+.timeline-comment .timeline-comment-header small {font-weight: normal;color: #8E8E8E;}
+.timeline-comment p.timeline-comment-text {display: block;color: #333;font-size: 12px;padding-left: 40px;}
+.post-options {overflow: hidden;margin-top: 15px;margin-left: 15px;}
+.post-options a {display: block;margin-top: 5px;margin-right: 20px;float: left;color: #333;text-decoration: none;font-size: 17px;}
+.post-options a:hover {color: #22BAA0;}
+#gallery .mix {display: none;}
+.view-id-e_wallet_summary.view-display-id-block_1{min-height: 271px;}
+
+.user-profile ul li {color: #282828}
+.user-profile ul li i {margin-right: 5px}
+.user-profile ul li a:link,.user-profile ul li a:visited {color: #282828;text-decoration: none}
+.profil-timeline-wrapper {padding: 30px 0}
+.profil-timeline-wrapper .profile-timeline .profile-name-section .profile-name-section-inner {margin-bottom: 15px;position: relative}
+.profil-timeline-wrapper .profile-timeline .profile-name-section .profile-name-section-inner h3 {font-size: 30px;color: #28343a;font-family:"Source Sans Pro","Helvetica Neue";}
+.profil-timeline-wrapper .profile-timeline .profile-name-section .profile-name-section-inner h5 {font-size: 13px;color: #333;padding: 10px 0 15px;font-family:"Source Sans Pro","Helvetica Neue";border-bottom: solid 1px #d2d0d0}
+.profil-timeline-wrapper .profile-timeline .profile-name-section .profile-name-section-inner .btn-red {width: 100px;height: 35px;text-align: center;color: #fff;background: #b70000;display: block;position: absolute;top: 0;right: 0;line-height: 35px;border-radius: 5px;text-decoration: none}
+.profil-timeline-wrapper .profile-timeline p {color: #747272;font-size: 13px;line-height: 22px;padding-bottom: 20px}
+.profil-timeline-wrapper .skills-area h3 {color: #333;font-size: 20px;border-bottom: solid 1px #d2d0d0;font-family:"Source Sans Pro","Helvetica Neue";padding-bottom: 10px}
+.profil-timeline-wrapper .skills-area .tags-links-wrapper {padding: 20px 0}
+.profil-timeline-wrapper .skills-area .tags-links-wrapper ul li{padding: 5px 10px;border-radius: 3px;display: inline-block;vertical-align: middle;border: solid 1px #ccc;margin: 0 10px 10px 0;background: #ffffff;background: -moz-linear-gradient(top, #fff 0%, #f2f2f2 100%);background: -webkit-linear-gradient(top, #fff 0%, #f2f2f2 100%);background: linear-gradient(to bottom, #fff 0%, #f2f2f2 100%);filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2', GradientType=0);color: #7a7979;text-decoration: none}
+.profil-timeline-wrapper .skills-area .persentage-area .pie-chart-block {width: 175px;display: inline-block}
+.profil-timeline-wrapper .skills-area .persentage-area .pie-chart-block .chart {text-align: center}
+.profil-timeline-wrapper .skills-area .persentage-area .pie-chart-block .chart .percent {width: 100%;text-align: center;display: block;position: absolute;top: 42px}
+.profil-timeline-wrapper .skills-area .persentage-area .pie-chart-block .chart .percent:after {content: '%'}
+.profil-timeline-wrapper .skills-area .persentage-area .pie-chart-block .skill-name {text-align: center;color: #282828}
+.about-employer .media .media-left img{width:60px;height:60px;}
+.about-employer .media .user-name{font-weight: bold;}
+.form-inline .form-autocomplete .icon.form-control-feedback {top: 0;}
+/*----------------------Mahesh 27-06-2016 ----------------------*/
+#edit-commerce-payment-payment-details-afl-epin-submit-form .fieldset-wrapper{border:0 !important;}
+.node-item-root.main-member{margin-top: 6px;}
+
+.job-details-wrapper{font-family: "Source Sans Pro","Helvetica Neue",}
+.job-details-right-info .placebid-button{ padding:6px 12px;margin-bottom: 5px;}
+#edit-select{margin-bottom:15px;}
+.about-employer ul{padding:0;}
+
+#block-views-e-wallet-summary-block-1{margin:14px 0px;}
+.region-statitics-right{min-height: 310px;}
+.form-item-htmlmail-plaintext{display:none;}
+.filter-wrapper{display:none;}
+.referal-link-wrap{margin:20px 20px;padding:20px; border:1px solid #EEE;}
+#block-block-11 .text-center .btn-social-icon{border:1px solid #6254b2; color: #6254b2;}
+#block-block-11 .text-center .btn-social-icon:hover{border:1px solid #6254b2; color:#FFF; background-color: #6254b2;}
+#copy-url{margin-right:84px;}
+.member-status-afl-wid{list-style: none;}
+.checkout-help{border: 1px solid #938cbe;color: #938cbe;padding: 20px;}
+#commerce-checkout-form-checkout .messages.error, #commerce-checkout-form-review .messages.error{border: 1px solid #ff0000;color: #ff0000;margin-bottom: 15px;padding: 20px;}
+.profile-cover:hover .wall-img-edit-btn, .profile-image-container:hover .profile-img-edit-btn{border: 1px solid;padding: 5px;border-color: #FFF;background-color: #111;}
+.checkout-buttons.form-wrapper .checkout-continue.form-submit{float:right;}
+.checkout-buttons.form-wrapper .checkout-cancel.form-submit{float:left;}
+.checkout-buttons.form-wrapper .button-operator{display:none;}
+.region.region-panel-grid .h1 {font-size:22px; font-weight: 400; line-height:39px;}
+.field-name-commerce-customer-billing{background-color: #fff;border-bottom: 1px solid #eee;margin-bottom: 10px;padding: 23px;}
+.field-name-commerce-customer-billing .field-label{font-weight: bold;}
+.builder-content-wrapper{margin:10px 0px 10px 0px;}
+.modules-icons{margin-right: 5px; width: 25px}
+
+/*----------------------End 27-06-2016 ----------------------*/
+
+/*----------------------Mahesh 29-06-2016 ----------------------*/
+
+.profil-timeline-wrapper {padding: 10px 0;}
+.profile-cover{position: relative;}
+.profile-cover .wall-img-edit-btn{position: absolute;top:0;right:0;color: #fff;top:3px;right:5px;}
+.profile-image-container{position: relative;}
+.profile-image-container .profile-img-edit-btn{position: absolute;top:3px;right:75px;color: #fff;}
+.view-support-bid-request .expert-in li{display: inline-block;vertical-align: middle;padding-right:1px;}
+.view-support-bid-request .expert-in li:after{width:2px;height:2px;content:' ,';}
+.view-support-bid-request .view-content .table-responsive table .media-left img{width:70px;height: auto;}
+.view-support-bid-request .view-content .table-responsive table .media-body{text-align: left;}
+.profile-section .m-t-lg{margin:0;}
+.view-support-thread{padding: 15px;background: #fff;box-shadow:0 1px 1px rgba(0, 0, 0, 0.05);margin-bottom: 20px;border:solid 1px #dee5e7;}
+.job-comment-block-title{font-weight:bold;color: #36464e;padding-bottom:10px;border-bottom:solid 1px #dee5e7;margin-bottom:0;}
+.job-comment-list{padding:0;}
+.job-comment-list li{list-style: none;border-bottom:solid 1px #dee5e7;padding:20px 0;}
+.message-info{padding:0 0 10px;}
+.hide-link{text-decoration: underline;color: #7266ba;padding-top:10px;display: block;}
+.job-files .view-support-files{min-height:auto;}
+.job-files .view-support-files ul{padding:10px 0 ;}
+.job-files .view-support-files li{display: inline-block;vertical-align:middle;width:50px;height:50px;border:solid 1px #ccc;text-align: center;line-height:50px;padding:0;}
+.job-details-wrapper .panel .panel-body .job-files .view-support-files li{padding:0;}
+
+/*----------------------End 29-06-2016 ----------------------*/
+
+/*----------------------Mahesh 01-07-2016 ----------------------*/
+#edit-cancel{background-color: #333;border-color: #000;color: #ffffff !important;padding: 8px 12px;font-size: 14px;vertical-align:middle;border-radius: 2px;}
+.block-views .more-link{background: #fff;padding: 6px 12px;text-align: right;}
+.block-views .more-link a:link{color: #8278c2;}
+.block-views .more-link a:hover{color: #6254b2;}
+/*----------------------Mahesh 06-07-2016 ----------------------*/
+.view-commerce-cart-summary .view-footer{margin: -2px 0;}
+.view-commerce-cart-summary .commerce-price-formatted-components.table{background:#fff;border:solid 2px #e8eaea;}
+.component-type-commerce-price-formatted-amount.odd {border: 2px solid #dedede;}
+.checkout_review .panel{box-shadow:none;}
+.view-commerce-cart-summary .component-type-commerce-price-formatted-amount .component-title{border-right:none;width:85%;text-align: right;}
+.view-commerce-cart-summary .component-type-commerce-price-formatted-amount .component-total{text-align:left;}
+#edit-afl-enrolment-details-review table .odd{background: #e8e8e8;}
+#edit-afl-enrolment-details-review table .odd td{text-align:left;}
+#edit-afl-enrolment-details-review table .even{background: #fff;}
+#edit-afl-enrolment-details-review table .even td{text-align:left;}
+#commerce-checkout-form-checkout legend{color:#b70000;}
+
+#edit-commerce-payment-payment-method {background: #fff;border: 1px solid #ddd;min-height: 214px;float: left;width: 30%;padding:0}
+.commerce_payment #payment-details {float: left;margin: 0;min-height: 214px;padding: 15px 30px;width: 70%;border:1px solid #ddd;}
+.commerce_payment .form-item-commerce-payment-payment-method.form-item.radio{-moz-border-bottom-colors: none;-moz-border-left-colors: none;-moz-border-right-colors: none;-moz-border-top-colors: none;border-color: -moz-use-text-color -moz-use-text-color #ddd #ddd;border-image: none;border-style: none none solid solid;border-width: medium medium 1px 1px;display: block;padding: 10px;position: relative;margin: 0 !important;border:none;border-bottom:solid 1px #ddd;}
+.commerce_payment .form-item-commerce-payment-payment-method.form-item.radio.active::before, .commerce_payment .form-item-commerce-payment-payment-method.form-item.radio.active::after {display: block;}
+.commerce_payment .form-item-commerce-payment-payment-method.form-item.radio:hover:before{display: block;}
+.commerce_payment .form-item-commerce-payment-payment-method.form-item.radio::before {border-bottom: 10px solid transparent;border-right: 10px solid #6b6b6b;border-top: 10px solid transparent;content: "";display: none;height: 0;position: absolute;right: 0;top: 10px;width: 0;}
+.commerce_payment .form-item-commerce-payment-payment-method.form-item.radio::after {background: #6b6b6b none repeat scroll 0 0;content: "";display: none;height: 100%;position: absolute;right: -1px;top: 0;width: 3px;}
+.commerce_payment .form-item-commerce-payment-payment-method.form-item.radio:hover:after{display: block;}
+.commerce_payment .form-item-commerce-payment-payment-method.form-item.radio .i-checks {display: none;}
+.commerce_payment .form-item-commerce-payment-payment-method.form-item.radio label{padding:0;}
+.commerce_payment .form-item-commerce-payment-payment-method.form-item.radio label i{margin-right:5px;}
+.commerce-credit-card-expiration .form-item-commerce-payment-payment-details-credit-card-exp-month, .commerce-credit-card-expiration .form-item-commerce-payment-payment-details-credit-card-exp-year {float: left;margin-right: 10px;width: 30%;}
+.commerce-month-year-divider {float: left;margin: 30px 10px 0 0;}
+.commerce-credit-card-expiration .form-item-commerce-payment-payment-details-credit-card-exp-year select {margin:25px 0 0;}
+#edit-commerce-payment{margin-bottom:20px;}
+/*#commerce-checkout-form-review input[type="submit"]{background: #b70000;border: medium none;color: #fff;display: inline-block;font-size: 18px;height: 47px;margin: 0 15px 0 0;text-align: center;text-transform: uppercase;border-radius:0;text-decoration: none;text-shadow:none;}
+#commerce-checkout-form-review input[type="submit"]:hover{background:#333;}
+#commerce-checkout-form-review .button-operator{margin-right:10px;}*/
+.page-checkout-review .field-name-commerce-customer-address{border:solid 1px #ccc;padding:10px;}
+.commerce_payment #payment-details input[type="text"],.commerce_payment #payment-details select{border-radius:0;}
+.view-id-enrolment_details .table-responsive table th{background: none;color: #333;font-weight:normal;border-right:solid 1px #c9c9c9;}
+.view-id-enrolment_details .table-responsive table tr.even{background: #ddd;}
+.view-id-enrolment_details .table-responsive{margin-bottom:20px;}
+.commerce_payment legend{margin-bottom:0}
+.afl_enrolment_details_review legend{color:#9e97ce;margin-bottom:0;}
+.cart-contents-title td{color:#9e97ce;margin-bottom:0;font-size: 20px;font-weight:normal !important;padding-bottom:10px !important;}
+.custom-lable-rounded{width: 40px;height: 40px;margin-right: 5px;display: inline-block;text-align: center;vertical-align: middle;border-radius: 100%;font-size: 24px;text-transform: capitalize;line-height: 40px;}
+
+/*-----------------Enrollment package selection  By Pratheesh---------------------*/
+#edit-field-afl-enrollment-fee .form-item.clearfix.form-type-radios.form-item-field-afl-enrollment-fee-und.form-group .form-item.clearfix.form-type-radio.form-item-field-afl-enrollment-fee-und.radio{display: inline-block;margin-top: 10px;}
+#edit-field-afl-enrollment-fee .form-item.clearfix.form-type-radios.form-item-field-afl-enrollment-fee-und.form-group .form-item.clearfix.form-type-radio.form-item-field-afl-enrollment-fee-und.radio .i-checks{display: none;}
+#edit-field-afl-enrollment-fee .form-item.clearfix.form-type-radios.form-item-field-afl-enrollment-fee-und.form-group .form-item.clearfix.form-type-radio.form-item-field-afl-enrollment-fee-und.radio > label.option{min-width: 253px;text-align: center;padding: 20px;margin-right: 10px;border: solid 2px #ccc;position: relative;}
+#edit-field-afl-enrollment-fee .form-item.clearfix.form-type-radios.form-item-field-afl-enrollment-fee-und.form-group .form-item.clearfix.form-type-radio.form-item-field-afl-enrollment-fee-und.radio.active-package label.option{border-color: #80c15d; }
+#edit-field-afl-enrollment-fee .form-item.clearfix.form-type-radios.form-item-field-afl-enrollment-fee-und.form-group .form-item.clearfix.form-type-radio.form-item-field-afl-enrollment-fee-und.radio label.option:hover{border-color: #80c15d;}
+ #edit-field-afl-enrollment-fee-und {text-align: center;}
+ #edit-field-afl-enrollment-fee .form-item.clearfix.form-type-radios.form-item-field-afl-enrollment-fee-und.form-group .form-item.clearfix.form-type-radio.form-item-field-afl-enrollment-fee-und.radio label.option:hover:after{content: "\f00c";font: normal normal normal 14px/1 FontAwesome;color: #2c692c;padding: 4px 5px;margin: 0;position: absolute;top: 0;right: 0; }
+ .active-package label.option:before{display:block;content: "";display: inline-block;border-left: 40px solid transparent;border-bottom: 40px solid transparent;border-right: 40px solid #80c15d;position: absolute;top: 0;right: 0;margin:0;position: absolute;background: none;}
+.active-package label.option:after{content: "\f00c";font: normal normal normal 14px/1 FontAwesome;color: #2c692c;padding: 4px 5px;margin: 0;position: absolute;top:0;right:0;}
+.active-payment label.option:after{border-bottom: 10px solid transparent;border-right: 10px solid #6b6b6b;border-top: 10px solid transparent;content: "";display: block;height: 0;position: absolute;right: 0;top: 10px;width: 0;}
+#footer {position: relative;}
+#afl-add-new-member #edit-field-agree-terms-and-conditions a{color: red;}
+#afl-ref-member #edit-field-agree-terms-and-conditions a{color: red;}
+#afl-add-new-member #agreement-modal-body .panel-body{overflow-y: scroll; max-height: 500px;}
+#afl-join-member #edit-field-agree-terms-and-conditions a{color: red;}
+#afl-join-member #agreement-modal-body .panel-body{overflow-y: scroll; max-height: 500px;}
+#afl-ref-member #agreement-modal-body .panel-body{overflow-y: scroll; max-height: 500px;}
+.find-members i{background-color: #fff;}
+.Maitenance-mode-announcement{background-color: #c8edf4;color: #555;padding: 26px 30px;}
+/*------------------------------------------------------------*/
+/*****************************************************/
+
+.ok-icon{font-size: 23px;}
+#copy-button{background: #202020;border-radius: 50%;}
+.bigger-lable{font-size: 19px;font-weight: 300px;}
+
+#edit-commerce-payment .fieldset-wrapper{background: #FFF;border: 1px solid #ddd;display:block;}
+#edit-commerce-payment .fieldset-wrapper:after{visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+#edit-commerce-payment .fieldset-wrapper:before{display: table;content: " ";}
+
+#edit-commerce-payment #payment-details{border:none;}
+#edit-commerce-payment .form-item-commerce-payment-payment-method.form-item.radio:last-child{border-bottom:none;}
+.commerce_payment #payment-details label{width:100%;display:block;float:none;clear: both;}
+.form-wrapper .form-type-managed-file .form-managed-file:after{content: ' ';display: table;clear: both;}
+#general-support-comment-form .ajax-action-group > .form-submit{margin-right:10px;}
+.job-details-wrapper .view-general-support-file .panel{border-top: solid 1px #c3c4c5;}
+.region-statitics-right .overview.panel.panel-white{box-shadow:none;}
+.region-statitics-right .overview.panel.panel-white .panel-body{padding:0px;}
+/*Sufaid.PP*/
+
+#block-system-main .view-id-manage_member .view-header .btn-addon{margin-right: 10px; }
+#block-system-main .other-member .view-filters .views-exposed-widgets  {margin-bottom: 15px;}
+
+.overview ul.overview-inner{padding: 0px;}
+.overview ul.overview-inner li{list-style: none;padding: 7px 10px;border-bottom: 1px solid #EEE;}
+.overview ul.overview-inner li h4{float: left;width: 70%;color: #323a45; font-size: 13px;margin: 0;}
+.overview ul.overview-inner li .overview-btn{float: right;width: 30%;text-align: right;}
+.overview-bg-icon {border-radius: 3px;display: inline-block;font-size: 12px;height: 17px;line-height: 17px;margin-right: 10px;text-align: center;width: 17px;}
+
+.sidebar-overview ul.overview-inner li h4{width: 100%;}
+.sidebar-overview ul.overview-inner li .overview-btn{width: 100%;padding: 0 0 0 27px;text-align: left;float: left;}
+.sidebar-overview li {padding: 15px 10px !important;}
+.sidebar-overview  li:nth-child(2n) {background: #FEFEFE none repeat scroll 0 0;}
+.features-quick-access .text-muted:hover{color:#6254b2 !important;}
+.common-txt-color-d{color: #23b7e5;font-size: 13px;font-weight: bold;}
+
+#block-block-14 .panel-body .btn-social-icon{border:10; color: #98a6ad;}
+#block-block-14 .panel-body .btn-social-icon:hover{border:1px solid #98a6ad; color:#FFF; background-color: #98a6ad;}
+
+
+/*End Sufaid*/
+.select-position{color: #23b7e5;font-weight: bold;}
+.select-position select{width: 186px;height: 36px;background: none;}
+ /* Events Calender - Sreeram */
+
+ .view-display-id-block_3 .date-nav-wrapper .date-heading{top: 10px;}
+ .view-display-id-block_3 .date-nav-wrapper .date-heading h3 {background:#ccc;font-size: 14px;font-weight: bold;line-height: 37px; width: 100%;}
+ .view-display-id-block_3 .date-nav-wrapper .date-prev{background: transparent;top: -17px;}
+ .view-display-id-block_3 .date-nav-wrapper .date-next {background:  transparent;top: -17px;}
+ .view-display-id-block_3 .calendar-calendar .month-view .full .single-day {background: #e1e1e1;}
+ .view-display-id-block_3 .calendar-calendar .month-view .full .single-day .inner .item{background:  transparent !important;}
+ .view-display-id-block_3 .calendar-calendar .month-view .full .single-day .inner .item .views-field.views-field-nothing {border-bottom: 1px solid #5d5d5d !important;}
+ .view-display-id-block_3 .calendar-calendar .month-view .full .single-day .inner .item .calendar.18.event_calendar_date.0.0.contents{color: #3b2f83;text-transform: capitalize;}
+ /*.view-display-id-block_3 .calendar-calendar .month-view .full .single-day .inner .item .views-field.views-field-edit-node {color: #23b7e5;}*/
+ .view-display-id-page_4 .date-nav-wrapper .date-prev { right: 73px; }
+ .view-display-id-block_3 ul.pager{ display: none; }
+.date-combo.form-wrapper { display: block !important; }
+.calendar-calendar .mini-day-on{ font-weight: bold; color: #c43445; font-size: 15px; font-weight: bold;}
+.calendar-calendar td { text-align: center; border: 1px solid #ccc !important; }
+.m-b-sm.text-md.head-events { position: relative; top: 35px; }
+.mini-day-on a{ text-decoration: none !important; font-weight: bold !important;}
+/* For Ad Banner*/
+.view-ad-banner .view-header .btn-primary{ margin-bottom: 10px !important; }
+.view-ad-banner .view-content .panel .table-responsive .views-table tbody tr td img { border: 0; height: 50px !important; width: 160px !important; }
+
+/*for transacton password in withdraw fund and transfer fund*/
+.transaction-password {width: 70%;display: inline-block;}
+.forget-transaction-password {display: inline-block;padding: 0px 20px;position: absolute;top: 130px;right: 230px;}
+.fund-transaction-password {position: absolute;top: 203px;right: 250px;}
+
+/*End Sreeram*/
+.view-commerce-cart-summary .component-type-commerce-price-formatted-amount .component-title {width: 82%;}
+.positive{ padding-right: 10px; }
+/*Anas strt*/
+#panel-null .panel {background-color: transparent;border: 0px solid;border-radius: 0px;box-shadow: 0 0px 0px rgba(0, 0, 0, 0.05);margin-bottom: 20px;}
+#panel-null .node-form,.from-panel{border: 0px solid;border-radius: 10px;}
+.lead-view .btn-primary{margin: 0 5px; }
+.container-inline-date .form-item{float: left;}
+.lead-comment{ float: left;}
+.container-fluid .campaign-banner{padding: 0;}
+/*anas end*/
+/* nidhisha start */
+#panel-null .builder-content-inner {padding: 10px;}
+.form-email {width : 100%;height: 21px;}
+.a2a_s__default {display: block !important;width: 39.5px !important;height: 40px !important;color: #838a8f !important;border-radius: 10px !important;}
+#lead-form-webform-block .form-item.webform-component {padding: 2px;}
+#lead-form-webform-block input.form-text {border-style: none none none !important;}
+#lead-form-webform-block .form-email {height: 30px;font-size: 13px;padding: 8px 12px;}
+#lead-form-webform-block .webform-client-form-2 {padding: 10px;}
+/* Nidhisha ends*/
+
+/*.btn-primary{margin: 0 5px; }*/
+.container-inline-date .form-item{float: left;}
+/*Membership Package Upgrade*/
+.row.row_membership {background: #fff none repeat scroll 0 0;margin: 18px 0;padding: 0;}
+.membership_link{background: #7266ba none repeat scroll 0 0;color: #fff;display: block;font-size: 20px;padding: 57px 0;text-align: center;}
+.membership_list h2 {font-size: 19px;font-weight: bold;}
+/*
+*	Pratheesh 	Model popup in unverified payments
+*/
+#replace_payment_info_content .payment_info_model{padding: 10px; background: #ccc;color: #000;}
+/*End*/
+/* 
+ Pratheesh 
+ */
+/* ----- Mining Products Show -------- */
+.card-product {text-align: center;}
+.card-raised {box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);}
+.card {background: #fff none repeat scroll 0 0;border-radius: 6px;color: rgba(0, 0, 0, 0.87);display: inline-block;margin: 25px 0;position: relative;width: 100%;}
+.card .card-content {padding: 15px 20px;position: relative;}
+.card-product .icon {padding: 10px 0 0;}
+.card-product .icon i {border: 1px solid #e5e5e5;border-radius: 50%;font-size: 55px;height: 130px;line-height: 130px;width: 130px;}
+.card-product .icon img {border: 1px solid #e5e5e5;border-radius: 50%;font-size: 55px;height: 130px;line-height: 130px;width: 130px;}
+/*  Dashboard products count  */
+.afl-widget-dhaborad-products-count{text-align: center; border-radius: 5px; text-transform: uppercase;font-size: 30px;color: #fff;/* box-shadow: 0 16px 26px -10px #000; */}
+
+.bg-skyblue{background-color: #0967a3;}
+.bg-light-green{background-color: #00afb4;}
+.bg-light-violet{background-color: #9086ad;}
+.bg-ethereum{background-color: #454a75;}
+.bg-gray{background-color: #3f3939;}
+
+.card-product .category{text-transform: uppercase;font-size: 30px;}
+.notification {color: #303036;background-color: #c8edf4;padding: 15px;margin: 0 0 10px 0;}
+.text-center {text-align: center;}
+.ethereum-summary-block{border: 1px dashed; padding: 10px; text-align: center;}
+.padder-v1{padding-bottom: 18px}
+.text-eth{color: #62688f;}
+.bg-ethereum .h1.font-thin.text-white, .afl-widget-dhaborad-products-count .h1.font-thin.text-white{font-size: 22px;font-weight: 400;line-height: 39px;}
+.timeline-not-inverted .timeline-main-panel-body{float: right;}
+.timeline-inverted .timeline-main-panel-body{float: left;}
+.custom-help-priority{padding: 9px 12px;min-width: 70px;}
+.custom-help-status{padding: 4px 12px;min-width: 70px;}
+.custom-expired-status{padding: 9px 12px;min-width: 150px;}
+
+.help-status-icon {font-size: 11px;margin-left: 7px;margin-right: -3px;}
+.get-help-unfinished-icon {border: 1px dashed #6f6f6f;color: #6f6f6f;}
+.help-status-icon {border-radius: 50%;padding: 3px;vertical-align: middle;}
+/*  ----------------------------- Pratheesh : Begin--------------------------------; */
+/*  ----------------------------- Pratheesh : End ---------------------------------; */
+
+.form-actions .btn, form .from-panel .btn {margin-bottom: 10px;}
+.m-t-22 {margin-top: 35px;}
+#views-exposed-form-manage-member-page{margin-bottom:10px;}
+#views-exposed-form-manage-member-page .form-inline .form-group{vertical-align: text-bottom;}
+.form-type-managed-file .btn{margin-bottom:0 !important;}
+.table-responsive.dashboard-table tbody th, .table-responsive.dashboard-table tbody td,.table-responsive.dashboard-table table th{text-align: left;}
+
+/*------------------theme color----------------*/
+
+.bg-black{background: #302f37;}
+.bg-black .nav > li > a,.bg-black .text-muted .fa-fw{color: #afaeb9;}
+.bg-black .nav > li:hover > a, .bg-black .nav > li:focus > a, .bg-black .nav > li.active > a{background: #3f3e49;}
+.common-txt-color-d,.text-info{color:#0967a3;}
+.bg-primary,.bg-primary.bg, .bg-primary .bg{background-color: #302f37;color: #f4f3f9;}
+.bg-info.dk, .bg-info .dk,.bg-info,.btn-info{background-color: #0967a3;color: #f4f3f9;border-color:#0967a3;}
+.btn-info:hover{background-color: #302f37;border-color:#302f37;}
+.nav-tabs-alt .nav-tabs > li.active > a{border-bottom-color: #0967a3 !important;}
+.btn-success {background-color: #0967a3;border-color: #0967a3;color: #ffffff;}
+.btn-primary{background-color: #302f37;border-color: #302f37;color: #ffffff;}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary{background-color: #0967a3;border-color:#0967a3;}
+.select-position {color: #302f37;font-weight: bold;}
+.bg-black.dk, .bg-black .dk,.bg-black .nav > li > a:focus{background: #201f2a !important;}
+.bg-black .nav > li .nav-sub a{color: #afaeb9;}
+.table-responsive span.label{margin-left:5px;}
+.arrow.right.arrow-primary::after{border-left-color:#302f37;}
+.i-checks input:checked + i::before{background: #302f37;}
+.i-checks input:checked + i {border-color: #302f37;}
+.panel-primary > .panel-heading {background-color: #0967a3;border-color: #0967a3;color: #fff;}
+.panel-primary {border-color: #0967a3;}
+ul.pager li.pager-current{background:#0967a3;border-color:#0967a3; }
+.text-primary-lt{color:#0967a3;}
+.nav.menu-navigation .fa.fa-briefcase{color: #afaeb9;}
+.text-primary {color: #302f37;}
+
+/*------------------end----------------*/
+
+/*  -------------Pratheesh : ; Custom field set ---------------- */
+.custom-fieldset {
+    font-family: sans-serif;
+    border: 1px solid #ccc;
+    background: #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 3px 0px;
+}
+
+.custom-fieldset legend {
+    /* background: #1F497D; */
+    border: 1px solid #ccc;
+    background: #FFF;
+    color: #1F497D;
+    padding: 5px 10px ;
+    /* font-size: 32px; */
+    border-radius: 1px;
+    /* box-shadow: 0 0 0 2px #ddd; */
+    /* margin-left: 20px; */
+    width: auto;
+    min-width: 10%;
+    text-align: center;
+    margin: 1px;
+}
+.component-type-commerce-price-formatted-amount.even {border: 2px solid #dedede;}
+
+@-moz-document url-prefix() {
+  #general-support-comment-form .form-managed-file > input[type="file"]{margin-top: 3px;}
+}
+
+@media only screen and (max-width:480px) {
+	#edit-submit-down-line-members,	#edit-submit-referred-members,#edit-submit-e-wallet-transactions,#afl-transaction-authorization-form #edit-submit,#edit-submit-ethereum-business-transactions,#edit-submit-ethereum-wallet-transaction,#edit-add-another-file,#edit-submit-business-transactions,#edit-submit-member-transactions,#edit-submit-members-and-funds,#edit-actionafl-reject-unverified-transaction,	#edit-submit-blocked-members,#edit-submit-delete-a-user-account,#edit-submit-find-members,#edit-submit-withdrawal-requests,#edit-actionafl-mark-as-paid{margin-bottom: 10px;}
+	.fund-transaction-password,{position: absolute;/* top: 0px; */right: 50%;margin: 15px;}
+    #edit-commerce-payment-payment-method,.commerce_payment #payment-details,.commerce-credit-card-expiration .form-item-commerce-payment-payment-details-credit-card-exp-month, .commerce-credit-card-expiration .form-item-commerce-payment-payment-details-credit-card-exp-year,.commerce-month-year-divider{width:100%;float: none;clear: both;display: block;min-height:inherit;margin-bottom:0;}
+    .commerce-month-year-divider{margin-top:0;}
+    .commerce-credit-card-expiration .form-item-commerce-payment-payment-details-credit-card-exp-year select{margin:0;}
+    .managed-file input[type="file"], .form-managed-file > input[type="file"]{margin-bottom:10px;}
+    #edit-select .form-group.form-item-operation{width:100%;}
+    div.vertical-tabs{margin:0;}
+    .vertical-tabs ul.vertical-tabs-list,.vertical-tabs-panes{width:100%;float: none;clear: both;display: block;margin:0;}
+}
+

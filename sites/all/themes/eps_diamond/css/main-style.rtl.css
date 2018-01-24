@@ -1,0 +1,4 @@
+@media only screen and (min-width: 768px) {
+  .app.aside-lg:not(.app-aside-folded) .navbar-collapse,.app.aside-lg:not(.app-aside-folded) .app-content,.app.aside-lg:not(.app-aside-folded) .app-footer {margin-left: auto;margin-right: 230px;}
+  .app.aside-xlg:not(.app-aside-folded) .navbar-collapse,.app.aside-xlg:not(.app-aside-folded) .app-content,.app.aside-xlg:not(.app-aside-folded) .app-footer {margin-left: auto;margin-right: 270px;}
+}

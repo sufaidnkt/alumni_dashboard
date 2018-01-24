@@ -1,0 +1,7 @@
+name =  My module
+description = My first module
+core = 7.x
+package = "Affiliate"
+
+
+version = '7-x-1.0'

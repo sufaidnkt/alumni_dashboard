@@ -1,0 +1,80 @@
+<?php
+function ssm_widgets_init(){
+  global $user;
+  
+}
+function ssm_widgets_block_info(){
+  $blocks =array();
+    $blocks['alumni_total_members'] = array('info' => t('Total Alumni Members'));
+    $blocks['alumni_my_class'] = array('info' => t('My Class Members Count'));
+    $blocks['alumni_my_batch'] = array('info' => t('My Batch Members Count'));
+
+    return $blocks;
+}
+
+function ssm_widgets_block_view($delta = '') {
+  afl_inc_file('inc', 'ssm_widgets', '/inc/ssm.widgets.block-callback');
+  switch ($delta) {
+    case 'alumni_total_members':
+      $block['content'] = _alumni_total_members();
+    break;
+    case 'alumni_my_class':
+      $block['content'] = _alumni_my_class_members();
+    break;
+    case 'alumni_my_batch':
+      $block['content'] = _alumni_my_batch_members();
+    break;
+    
+  }
+  return $block;
+}
+/*
+ * --------------------------------------------------------------
+ * Hook menu
+ * --------------------------------------------------------------
+*/
+  function ssm_widgets_menu(){
+    afl_inc_file('inc', 'ssm_widgets', 'inc/ssm.menu.widgets');
+    return _ssm_widgets_menus();
+  }
+/*
+ * --------------------------------------------------------------
+ * Hook permissions
+ * --------------------------------------------------------------
+*/
+  function ssm_widgets_permission() {
+    return array(
+      'alumni dashboard widgets' => array('title' => t('Dashboard Widgets (Ajax callback)')),
+    );
+  }
+
+/*
+*
+*
+*/
+function alumni_user_load($uid){
+$result = db_select('alumni_user_genealogy', 'user')
+    ->fields('user')
+    ->condition('uid', $uid)
+    ->execute()
+    ->fetchAssoc();
+   return $result;
+ }
+
+ function alumni_widget_data_details($uid, $batch = FALSE, $department = FALSE){
+    
+    $user_info = alumni_user_load($uid);
+    $q = db_select('alumni_user_genealogy', 'user');
+    $q->fields('user');
+    $q->condition('status', 1, '=');  
+    if($batch){
+      $q->condition('passout', $user_info['passout'], '=');
+    }
+    if($department){
+     $q->condition('department', $user_info['department'], '='); 
+    }
+    // $q->execute();
+    $num_of_results = $q->execute()->rowCount();
+    return $num_of_results;
+    
+  }

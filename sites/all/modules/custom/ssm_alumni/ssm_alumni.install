@@ -1,0 +1,105 @@
+<?php 
+function ssm_alumni_schema() {
+$schema['alumni_user_genealogy'] = array(
+    'description' => t('Stores the alumni user information'),
+    'fields' => array(
+      'alumni_user_genealogy_id' => array(
+        'type' => 'serial',
+        ),
+      'uid' => array(
+        'description' => t('Registered user'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        ),
+      'username' => array(
+        'description' => t('User Name'),
+        'type' => 'varchar',
+        'length' => 100,
+        ),
+      'department' => array(
+        'description' => t('User department'),
+        'type' => 'varchar',
+        'length' => 100,
+        ),
+      'sex' => array(
+        'description' => t('User Sex'),
+        'type' => 'varchar',
+        'length' => 100,
+        ),
+      'passout' => array(
+        'description' => t('Year of Passout'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'default' => 0,
+        ),
+      'status' => array(
+        'description' => t('0-unverified 1-member 2-mail verified'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        ),
+      'profile_view' => array(
+        'description' => t('0-Private 1-Public 2-only for batch'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        ),
+      'approved_by' => array(
+        'description' => t('Approved User Id'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+  		'default' => 0,
+        ),
+      'created' => array(
+        'description' => t('Created'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        ),
+      'modified' => array(
+        'description' => t('Modified'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'default' => 0,
+        ),
+      'extra_info' => array(
+        'description' => t('Extra Info'),
+        'description' => t('Extra Info'),
+        'type' => 'varchar',
+        'length' => 300,
+        ),
+      'deleted' =>  array(
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'description' => t('Deleted Status'),
+        'default' => 0,
+        ),
+      ),
+    'primary key' => array('alumni_user_genealogy_id'),
+    );
+    
+    $schema['ssm_variable'] = array(
+        'description' => 'Variable table',
+        'fields' => array(
+          'name' => array(
+            'description' => 'The name of the variable.',
+            'type' => 'varchar',
+            'length' => 250,
+            'not null' => TRUE,
+            'default' => 'default',
+          ),
+          'value' => array(
+            'description' => 'The value of the variable.',
+            'type' => 'text',
+            'not null' => TRUE,
+            'size' => 'big',
+          ),
+        ),
+        'primary key' => array('name'),
+      );
+    return $schema;
+}

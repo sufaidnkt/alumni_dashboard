@@ -1,0 +1,3 @@
+.bg-black{background: #36464e;}
+.bg-black .nav > li > a:hover, .bg-black .nav > li > a:focus,.bg-black .nav > li:hover > a, .bg-black .nav > li:focus > a, .bg-black .nav > li.active > a{background: #28343a;}
+.logo-wrapper{background: #dfdfdf;}

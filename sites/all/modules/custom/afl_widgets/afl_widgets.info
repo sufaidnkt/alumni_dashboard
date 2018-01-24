@@ -1,0 +1,10 @@
+name =  Plan Widgets
+description = Plan Widgets
+core = 7.x
+package = "Affiliate"
+
+
+stylesheets[all][] = css/widget-style.css
+
+scripts[] = js/highcharts.js
+scripts[] = js/widget-script.js

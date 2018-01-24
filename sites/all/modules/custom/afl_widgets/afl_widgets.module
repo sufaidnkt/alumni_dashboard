@@ -1,0 +1,56 @@
+<?php
+function afl_widgets_block_info(){
+  $blocks =array();
+    $blocks['afl_groups'] = array('info' => t('My Groups'));
+    $blocks['afl_total_messages'] = array('info' => t('Total Messages'));
+    $blocks['afl_total_send_messages'] = array('info' => t('Total Send Messages'));
+    $blocks['afl_total_received_messages'] = array('info' => t('Total Received Messages'));
+    $blocks['afl_total_unread_messages'] = array('info' => t('Total Unread Messages'));
+
+    return $blocks;
+}
+
+function afl_widgets_block_view($delta = '') {
+  afl_inc_file('inc', 'afl_widgets', '/inc/afl.widgets.block-callback');
+  switch ($delta) {
+    case 'afl_groups':
+      $block['content'] = _afl_groups();
+    break;
+    case 'afl_total_messages':
+      $block['content'] = _afl_total_messages();
+    break;
+    case 'afl_total_send_messages':
+      $block['content'] = _afl_total_send_messages();
+    break;
+    case 'afl_total_received_messages':
+      $block['content'] = _afl_total_received_messages();
+    break;
+    case 'afl_total_unread_messages':
+      $block['content'] = _afl_total_unread_messages();
+    break;
+  }
+  return $block;
+}
+/*
+ * --------------------------------------------------------------
+ * Hook menu
+ * --------------------------------------------------------------
+*/
+  function afl_widgets_menu(){
+    afl_inc_file('inc', 'afl_widgets', 'inc/afl.menu.widgets');
+    return _afl_widgets_menus();
+  }
+/*
+ * --------------------------------------------------------------
+ * Hook permissions
+ * --------------------------------------------------------------
+*/
+  function afl_widgets_permission() {
+    return array(
+      'my groups' => array('title' => t('My Groups (Ajax callback)')),
+      'total messages' => array('title' => t('Total Messages (Ajax callback)')),
+      'total send messages' => array('title' => t('Total Send Messages (Ajax callback)')),
+      'total receive messages' => array('title' => t('Total Recieved Messages (Ajax callback)')),
+      'total unread messages' => array('title' => t('Total Unread Messages (Ajax callback)')),
+    );
+  }

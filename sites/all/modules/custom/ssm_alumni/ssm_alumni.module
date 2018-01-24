@@ -1,0 +1,226 @@
+<?php 
+
+function ssm_alumni_menu() {
+  $items['ssm/admin-conf'] = array(
+    'title' => t('Admin Configuration'),
+    'description' => t('Adsmin Configuration'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ssm_admin_configuration'),
+    'access arguments' => array('ssm_admin_conf'),
+    'file' => 'inc/ssm_admin_conf.inc',
+    'file path' => drupal_get_path('module', 'ssm_alumni'),
+	);
+
+  $items['ssm/reset-members'] = array(
+    'title' => t('Reset Members'),
+    'description' => t('Reset all test users'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ssm_reset_members'),
+    'access arguments' => array('ssm_admin_conf'),
+    'file' => 'inc/ssm_admin_conf.inc',
+    'file path' => drupal_get_path('module', 'ssm_alumni'),
+  );
+
+  return $items;
+   
+}
+
+function ssm_alumni_permission(){
+
+	return array(
+   	'ssm_admin_conf' => array(
+    'title' => t('Alumni System Admin Configuration'),
+    'description' => t('Permiision only for admin'),
+   ),
+  );
+}
+
+
+function ssm_alumni_action_info() {
+  return array(
+    'alumni_member_cancel_account' => array(
+      'type' => 'user',
+      'label' => t('Alumni Cancel Member Account'),
+      'configurable' => FALSE,
+      'behaviour' => array('any'),
+      'triggers' => array('any'),
+    ),
+    'afl_approve_unverified' => array(
+      'type' => 'user',
+      'label' => t('Alumni Unverified Members Approval'),
+      'configurable' => FALSE,
+      'triggers' => array('any'),
+      'pass rows' => TRUE,
+    ),
+
+  );
+}
+function alumni_member_cancel_account($row, $context){
+  afl_inc_file('inc', 'ssm_alumni', 'inc/ssm.manipulations');
+  _ssm_cancel_member_account($row);
+  return TRUE;
+}
+
+function afl_approve_unverified($row, $context){
+  afl_inc_file('inc', 'ssm_alumni', 'inc/ssm.manipulations');
+  _ssm_approve_user_account($row);
+  return TRUE;
+
+}
+function ssm_alumni_form_alter(&$form, &$form_state, $form_id){
+  if($form_id == 'user_register_form'){  
+      $username = microtime();
+      $form['account']['name']['#value'] = preg_replace('/[^A-Za-z0-9\-]/', '', $username);
+      $form['account']['name']['#access'] = FALSE;
+      $form['profile_main']['#access'] = FALSE;
+      $form['field_mobile_number']['und'][0]['value']['#attributes'] = array('groupfields' => array('prefix' => '+91') );
+      
+      $form['#validate'][] = 'ssm_joining_form_extra_validate';
+      $form['#submit'] = array();
+      $form['#submit'][] = 'ssm_joining_form_submit';
+  }
+  return $form;
+}
+
+function ssm_joining_form_submit($form, &$form_state){   
+    $afl_date = afl_date();
+    $afl_date_splits = afl_date_splits($afl_date);
+
+    $values = $form_state['values'];
+    $passout    = $values['field_year_of_passout']['und'][0]['value'];
+    $department = $values['field_department']['und'][0]['value'];
+    $sex = $values['field_sex']['und'][0]['value'];
+
+    $values['name'] = generate_username($passout,$department);
+    $values['roles'][5] = 1;
+    $account = drupal_anonymous_user();
+    $user = user_save($account, $values);
+    if($user){
+      $uid = $user->uid;
+      $fields['uid'] = $uid;
+      $fields['username'] = $user->name;
+      $fields['department'] = $department;
+      $fields['sex'] = $sex;
+      $fields['passout'] = $passout;
+      $fields['status'] = 0;
+      $fields['created'] = afl_date();
+      $fields['modified'] = afl_date();
+      $fields['extra_info'] = afl_date_combined($afl_date_splits);
+      $gen_id = db_insert('alumni_user_genealogy')
+              ->fields($fields)->execute();
+
+      if($gen_id){
+        drupal_set_message(t('Enrolment is completed'), 'status', FALSE);
+        drupal_goto('user');
+      }
+    }  
+}
+
+function ssm_joining_form_extra_validate($form, &$form_state){
+  $values   = $form_state['values'];
+  $mob_1    = $values['field_mobile_number']['und'][0]['value'];
+  $mob_2    = $values['field_mobile_number_2']['und'][0]['value'];
+  if(!$mob_1 && !$mob_2){
+    drupal_set_message('Please enter any one of mobile number','danger');
+  }
+
+}
+
+function generate_username($passout,$department){
+  if(!$passout || !$department){
+    return 0;
+  }
+    $count = ssm_variable_get('username_'.$passout.'_'.$department);
+    $count ++;
+    ssm_variable_set('username_'.$passout.'_'.$department,$count);
+    $username =  $passout.$department.$count;
+    return $username;
+
+}
+function ssm_variable_get($name, $default = NULL) {
+   if(db_table_exists('ssm_variable')){
+      $value1 = db_select('ssm_variable', 'variable')
+        ->fields('variable', array('value'))
+        ->condition('name', $name,'=')
+        ->execute()->fetchField();
+      if($value1){
+        return (json_decode($value1, true));
+      }
+   }
+}
+
+function ssm_variable_set($name, $value) {
+  if(db_table_exists('ssm_variable')){
+      $result = json_encode($value);
+      db_merge('ssm_variable')
+        ->key(array(
+          'name' => $name,
+          ))
+        ->fields(array('value' => $result))->execute();
+  }
+
+}
+
+
+function ssm_add_role($user_id, $role_name) {
+  // For convenience, we'll allow user ids as well as full user objects.
+  if (is_numeric($user_id)) {
+    $user = user_load($user_id);
+  }
+  // If the user doesn't already have the role, add the role to that user.
+  $key = array_search($role_name, $user->roles);
+  if ($key == FALSE) {
+    // Get the rid from the roles table.
+    $roles = user_roles(TRUE);
+    $rid = array_search($role_name, $roles);
+    if ($rid != FALSE) {
+      $new_role[$rid] = $role_name;
+      $all_roles = $user->roles + $new_role; // Add new role to existing roles.
+      return user_save($user, array('roles' => $all_roles));
+    }
+  }
+}
+
+function ssm_change_role_to_role($user_id, $old_role_name, $new_role){
+ if (is_numeric($user_id)) {
+    $user = user_load($user_id);
+  }
+  // Only remove the role if the user already has it.
+  $key = array_search($old_role_name, $user->roles);
+  if ($key == TRUE) {
+    // Get the rid from the roles table.
+    $roles = user_roles(TRUE);
+    $rid = array_search($old_role_name, $roles);
+    $new_rid = array_search($new_role, $roles);
+    if ($rid != FALSE) {
+      // Make a copy of the roles array, without the deleted one.
+      $new_roles = array();
+      foreach($user->roles as $id => $name) {
+        if ($id != $rid) {
+          $new_roles[$id] = $name;
+        }
+      }
+      $new_roles[$new_rid] = $new_role;
+     return user_save($user, array('roles' => $new_roles));
+    }
+  }
+}
+
+function ssm_get_user_department($uid){
+  $dep = db_select('field_data_field_department','dep')
+  ->fields('dep', array('field_department_value'))
+  ->condition('entity_id',$uid)
+  ->execute()->fetchField();
+  return $dep;
+
+}
+function ssm_get_user_passout($uid){
+  $year = db_select('field_data_field_year_of_passout','year')
+  ->fields('year', array('field_year_of_passout_value'))
+  ->condition('entity_id',$uid)
+  ->execute()->fetchField();
+  return $year;
+
+}
+
+

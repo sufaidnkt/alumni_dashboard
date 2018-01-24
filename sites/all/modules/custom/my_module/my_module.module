@@ -1,0 +1,41 @@
+<?php
+function my_module_menu(){
+	$items = array();
+	$items['test-code'] = array(
+    'title' => 'Test Codes',
+    'page callback' => 'test_codes',
+    'access arguments' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function test_codes(){
+	  $message = ['Order has been submitted'];
+   $to = 'pratheesh@epixelsolutions.com';   
+   $from = 'pratheesh@epixelsolutions.com';
+   $body = array();
+   $body[] = 'Hello';   
+   $params = array(
+     'body' => $body,
+     'subject' => 'Order submission acknowledgement',
+     );
+ /*  $msg = drupal_mail('eps_pricing', 'some_mail_key', $to,language_default(), $params, $from,TRUE);
+ pr($msg['result'],1);*/
+ if (drupal_mail('eps_pricing', 'some_mail_key', $to,language_default(), $params, $from,TRUE)) {
+   echo ('Thanks, email sent.');    
+ } else {
+   echo ('Email not sent...');
+ }
+}
+/**
+ * Implements hook_mail for module_name.
+ */
+function my_module_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'any_key':
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['body'];
+      break;
+  }
+}

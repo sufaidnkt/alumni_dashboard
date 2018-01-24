@@ -1,0 +1,19 @@
+name = Material Kit
+description = material Kit
+version = VERSION
+core = 7.x
+engine = 'phptemplate'
+
+
+stylesheets[all][] = assets/css/material-dashboard.css
+stylesheets[all][] = assets/css/bootstrap.min.css
+stylesheets[all][] = assets/css/material-kit.css
+stylesheets[all][] = assets/css/demo.css
+stylesheets[all][] = assets/css/developer.css
+
+
+scripts[] = 'assets/js/jquery.min.js'
+scripts[] = 'assets/js/bootstrap.min.js'
+scripts[] = 'assets/js/bootstrap-datepicker.js'
+scripts[] = 'assets/js/material.min.js'
+scripts[] = 'assets/js/nouislider.min.js'

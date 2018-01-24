@@ -1,0 +1,9 @@
+name =  Alumni Widgets
+description = Alumni Widgets
+core = 7.x
+package = "alumni"
+
+
+stylesheets[all][] = css/widget-style.css
+
+scripts[] = js/widget-script.js

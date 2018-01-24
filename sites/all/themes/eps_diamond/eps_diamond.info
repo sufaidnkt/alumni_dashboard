@@ -1,0 +1,78 @@
+name = Epixel Allnatt Diamond Theme
+description = A Boostrap based theme.
+core = 7.x
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[header]                = 'Header Top Bar'
+regions[quick_link]            = 'Quick Link'
+regions[profile]               = 'Page Profile (Left aside)'
+regions[navigation]            = 'Navigation'
+regions[navigation_bottom]     = 'Navigation Bottom (Aside Footer)'
+regions[title_extra]           = 'Title Extra'
+regions[sidebar_first]         = 'Sidebar First'
+regions[sidebar_first_footer]  = 'Sidebar First Footer'
+regions[sidebar_second]        = 'Sidebar Secondary'
+regions[sidebar_second_footer] = 'Sidebar Secondary Footer'
+regions[announcements]         = 'Announcements'
+regions[panel_grid]            = 'Panel Grid'
+regions[analytics_left]        = 'Anallytics Left'
+regions[analytics_right]       = 'Anallytics Right'
+regions[statitics_left]        = 'Statitics Left'
+regions[statitics_right]       = 'Statitics Right'
+regions[grid_block_left]       = 'Grid Block Left'
+regions[grid_block_right]      = 'Grid Block Right'
+regions[content_top]           = 'Content top'
+regions[event_calender]        = 'Event Calender'
+regions[content]               = 'Content'
+regions[notifications]         = 'Notifications Area'
+regions[content_bottom]        = 'Content bottom'
+regions[footer]                = 'Footer'
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+stylesheets[all][] = libs/assets/animate.css/animate.css
+stylesheets[all][] = libs/assets/font-awesome/css/font-awesome.min.css" type="text/css
+stylesheets[all][] = libs/assets/simple-line-icons/css/simple-line-icons.css
+stylesheets[all][] = css/font.css
+stylesheets[all][] = css/app.css
+#stylesheets[all][] = css/app.rtl.css
+stylesheets[all][] = css/main-style.css
+#stylesheets[all][] = css/custom-color.css
+stylesheets[all][] = css/main-developer.css
+stylesheets[all][] = css/styles.css
+
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+scripts[] = js/ui-load.js
+scripts[] = js/ui-jp.config.js
+scripts[] = js/ui-jp.js
+scripts[] = js/ui-nav.js
+scripts[] = js/ui-toggle.js
+scripts[] = js/ui-client.js
+scripts[] = js/drupal-main.js
+scripts[] = js/common.js
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Settings Values
+;;;;;;;;;;;;;;;;;;;;;
+
+settings[logo_icon] = logo-icon.png
+settings[fixed_header] = 0
+settings[fixed_aside] = 0
+settings[folded_aside] = 0
+settings[dock_aside] = 0
+settings[boxed_layout] = 0
+settings[layout_color] = 0
+
