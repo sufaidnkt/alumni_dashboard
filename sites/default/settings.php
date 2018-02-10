@@ -249,7 +249,7 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'material_dashbord',
+      'database' => 'sufaid_db',
       'username' => 'root',
       'password' => 'root',
       'host' => 'localhost',
@@ -290,7 +290,7 @@ $update_free_access = FALSE;
  *   $drupal_hash_salt = file_get_contents('/home/example/salt.txt');
  *
  */
-$drupal_hash_salt = '-nM-i5Onb-WjLhP4By3ai_flAGK-GJ2y8YN6k79UgjY';
+$drupal_hash_salt = 'TvWOVMdyp5mWVuxrHUWFDAank_zs3DSseohCArANSYw';
 
 /**
  * Base URL (optional).

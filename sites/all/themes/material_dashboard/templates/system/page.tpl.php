@@ -155,31 +155,32 @@ else{
     </div>
 
     <script type="text/javascript">
-      /* Selected package in add new member */
-        if($(' .form-item-field-department-und .form-radios input:radio').length){
-          console.log('here');
+      
+        (function($){
+
+              /* Selected package in add new member */
+        if($('.form-item-field-department-und .form-radios input:radio').length){
           //if the radio already selected
-          if($(' .form-item-field-department-und .form-radios input:radio').is(':checked')) {
-            $(' .form-item-field-department-und .form-radios input:radio:checked').parent().parent().addClass("active-package");
+          if($('.form-item-field-department-und .form-radios input:radio').is(':checked')) {
+            $('.form-item-field-department-und .form-radios input:radio:checked').parent().parent().addClass("active-package");
 
           }
           //in logged user add mbr
           $(' .form-item-field-department-und .form-radios input:radio').on('change',function() {
             $(' .form-item-field-department-und').removeClass("active-package");
             if($(this).is(":checked")) {
-
                 $(this).parent().parent().addClass("active-package");
             }
           });
         }
+          $(".rslides").responsiveSlides({
+             pause: true,     // Boolean: Pause on hover, true or false
+            // nav: true,             // Boolean: Show navigation, true or false
+
+          });
+        })(jQuery);
     </script>
 
     <script>
-  $(function() {
-    $(".rslides").responsiveSlides({
-       pause: true,     // Boolean: Pause on hover, true or false
-      // nav: true,             // Boolean: Show navigation, true or false
-
-    });
-});
+ 
 </script>
