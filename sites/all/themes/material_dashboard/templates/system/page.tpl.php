@@ -140,7 +140,10 @@ else{
                     </div>
                 </div>
             </div>
-            <footer class="footer">
+           
+        </div>
+    </div>
+     <footer class="footer">
                 <div class="container-fluid">
                     <p class="copyright pull-right">
                         &copy;
@@ -151,9 +154,6 @@ else{
                     </p>
                 </div>
             </footer>
-        </div>
-    </div>
-
     <script type="text/javascript">
       
         (function($){
