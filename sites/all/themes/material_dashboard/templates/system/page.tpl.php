@@ -8,9 +8,7 @@ else{
 
  ?>
 
- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  
  <div class="wrapper">
    <div class="text-center">
 
@@ -157,7 +155,6 @@ else{
     <script type="text/javascript">
       /* Selected package in add new member */
         if($(' .form-item-field-department-und .form-radios input:radio').length){
-          console.log('here');
           //if the radio already selected
           if($(' .form-item-field-department-und .form-radios input:radio').is(':checked')) {
             $(' .form-item-field-department-und .form-radios input:radio:checked').parent().parent().addClass("active-package");
@@ -175,11 +172,5 @@ else{
     </script>
 
     <script>
-  $(function() {
-    $(".rslides").responsiveSlides({
-       pause: true,     // Boolean: Pause on hover, true or false
-      // nav: true,             // Boolean: Show navigation, true or false
-
-    });
-});
+  
 </script>

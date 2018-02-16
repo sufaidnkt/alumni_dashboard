@@ -1,6 +1,6 @@
 (function($){
-  Drupal.behaviors.alumniWidgets = {
-    attach: function(context, settings) {
+  Drupal.behaviors.alumniWidgets = { 
+      attach: function(context, settings) {
       $(document).ready(function() { 
 
         /* My Groups*/ 

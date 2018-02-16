@@ -1,5 +1,12 @@
 <?php 
 
+function ssm_alumni_init(){
+  $uid = 45;
+  pr(user_load($uid),1 );
+
+}
+
+
 function ssm_alumni_menu() {
   $items['ssm/admin-conf'] = array(
     'title' => t('Admin Configuration'),

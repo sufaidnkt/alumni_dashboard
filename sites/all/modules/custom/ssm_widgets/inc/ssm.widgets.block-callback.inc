@@ -1,5 +1,5 @@
 <?php 
-	function _alumni_total_members () {
+	function _alumni_total_members () { 
   	drupal_add_js(array('alumniWidgets' => array('_alumni_total_members' => url('alumni/widget/ajax/total-members'))),'setting');
 		return theme('html_tag', array('element' => array('#tag' => 'div','#attributes' => array('class' => array('afl-widget-panel','afl-widget'),'widget' => '_alumni_total_members'),'#value' => '<div class="loader loader-bar"></div>')));
 	}

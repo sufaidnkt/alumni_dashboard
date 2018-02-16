@@ -12,7 +12,7 @@ function ssm_widgets_block_info(){
     return $blocks;
 }
 
-function ssm_widgets_block_view($delta = '') {
+function ssm_widgets_block_view($delta = '') { 
   afl_inc_file('inc', 'ssm_widgets', '/inc/ssm.widgets.block-callback');
   switch ($delta) {
     case 'alumni_total_members':
@@ -33,9 +33,40 @@ function ssm_widgets_block_view($delta = '') {
  * Hook menu
  * --------------------------------------------------------------
 */
-  function ssm_widgets_menu(){
-    afl_inc_file('inc', 'ssm_widgets', 'inc/ssm.menu.widgets');
-    return _ssm_widgets_menus();
+  function ssm_widgets_menu(){ 
+    // afl_inc_file('inc', 'ssm_widgets', 'inc/ssm.menu.widgets');
+    // return _ssm_widgets_menus();
+   $items['alumni/widget/ajax/total-members'] = array(
+    'title' => t('Total Alumni Members'),
+    'type'=> MENU_CALLBACK,
+    'page callback' => '_alumni_total_members',
+    'page arguments' => array(3),
+    'access arguments' => array('alumni dashboard widgets'),
+    'file' => 'inc/ssm.menu.callback.widgets.inc',
+    'file path' => drupal_get_path('module', 'ssm_widgets'),
+  );
+
+  $items['alumni/widget/ajax/my-class'] = array(
+    'title' => t('My Class Members'),
+    'type'=> MENU_CALLBACK,
+    'page callback' => '_alumni_my_class_members',
+    'page arguments' => array(3),
+    'access arguments' => array('alumni dashboard widgets'),
+    'file' => 'inc/ssm.menu.callback.widgets.inc',
+    'file path' => drupal_get_path('module', 'ssm_widgets'),
+  );
+
+  $items['alumni/widget/ajax/my-batch'] = array(
+    'title' => t('My Batch Members'),
+    'type'=> MENU_CALLBACK,
+    'page callback' => '_alumni_my_batch_members',
+    'page arguments' => array(3),
+    'access arguments' => array('alumni dashboard widgets'),
+    'file' => 'inc/ssm.menu.callback.widgets.inc',
+    'file path' => drupal_get_path('module', 'ssm_widgets'),
+  );
+
+  return $items;
   }
 /*
  * --------------------------------------------------------------

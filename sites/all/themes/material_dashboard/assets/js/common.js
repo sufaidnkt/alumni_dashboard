@@ -22,8 +22,15 @@
       });
     }
   };
-}(jQuery));
+}
+$(function() {
+    $(".rslides").responsiveSlides({
+       pause: true,     // Boolean: Pause on hover, true or false
+      nav: true,             // Boolean: Show navigation, true or false
 
+    });
+});
+(jQuery));
 
 
 

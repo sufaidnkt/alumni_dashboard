@@ -25,10 +25,15 @@ regions[content_bottom] = 'Content Bottom'
 stylesheets[all][] = assets/css/bootstrap.min.css
 stylesheets[all][] = assets/css/material-dashboard.css
 stylesheets[all][] = assets/css/demo.css
-;stylesheets[all][] = assets/css/app.css
+stylesheets[all][] = assets/css/app.css
+stylesheets[all][] = assets/css/material_icon.css
+stylesheets[all][] = assets/css/font_roboto.css
+;stylesheets[all][] = assets/css/font-awesome.min.css
 stylesheets[all][] = assets/css/developer.css
 
-scripts[] = 'assets/js/jquery-3.2.1.min.js'
+
+
+;scripts[] = assets/js/jquery.min.js
 scripts[] = 'assets/js/bootstrap.min.js'
 scripts[] = 'assets/js/material.min.js'
 scripts[] = 'assets/js/chartist.min.js'
@@ -37,6 +42,5 @@ scripts[] = 'assets/js/perfect-scrollbar.jquery.min.js'
 scripts[] = 'assets/js/bootstrap-notify.js'
 scripts[] = 'assets/js/material-dashboard.js'
 scripts[] = 'assets/js/demo.js'
-scripts[] = 'assets/js/common.js'
-scripts[] = 'assets/js/jquery.min.js'
 scripts[] = 'assets/js/responsiveslides.min.js'
+scripts[] = 'assets/js/common.js'
