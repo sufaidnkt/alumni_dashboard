@@ -62,7 +62,7 @@
 
   Drupal.fun = function (){};
 
-  Drupal.fun.panelDashWidgets = function (obj,ajax_url) {  console.log(obj);
+  Drupal.fun.panelDashWidgets = function (obj,ajax_url) {
     if(obj && ajax_url){ 
       $.getJSON(ajax_url,function (jsonDatas) { 
         if(jsonDatas){

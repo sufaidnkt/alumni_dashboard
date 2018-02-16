@@ -138,7 +138,10 @@ else{
                     </div>
                 </div>
             </div>
-            <footer class="footer">
+           
+        </div>
+    </div>
+     <footer class="footer">
                 <div class="container-fluid">
                     <p class="copyright pull-right">
                         &copy;
@@ -149,28 +152,42 @@ else{
                     </p>
                 </div>
             </footer>
-        </div>
-    </div>
-
     <script type="text/javascript">
+<<<<<<< HEAD
       /* Selected package in add new member */
         if($(' .form-item-field-department-und .form-radios input:radio').length){
+=======
+      
+        (function($){
+
+              /* Selected package in add new member */
+        if($('.form-item-field-department-und .form-radios input:radio').length){
+>>>>>>> 20291f6990bfdb747dff05de4a324e97d5e374d8
           //if the radio already selected
-          if($(' .form-item-field-department-und .form-radios input:radio').is(':checked')) {
-            $(' .form-item-field-department-und .form-radios input:radio:checked').parent().parent().addClass("active-package");
+          if($('.form-item-field-department-und .form-radios input:radio').is(':checked')) {
+            $('.form-item-field-department-und .form-radios input:radio:checked').parent().parent().addClass("active-package");
 
           }
           //in logged user add mbr
           $(' .form-item-field-department-und .form-radios input:radio').on('change',function() {
             $(' .form-item-field-department-und').removeClass("active-package");
             if($(this).is(":checked")) {
-
                 $(this).parent().parent().addClass("active-package");
             }
           });
         }
+          $(".rslides").responsiveSlides({
+             pause: true,     // Boolean: Pause on hover, true or false
+            // nav: true,             // Boolean: Show navigation, true or false
+
+          });
+        })(jQuery);
     </script>
 
     <script>
+<<<<<<< HEAD
   
+=======
+ 
+>>>>>>> 20291f6990bfdb747dff05de4a324e97d5e374d8
 </script>

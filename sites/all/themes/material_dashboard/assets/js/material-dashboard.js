@@ -1,31 +1,26 @@
-/*!
 
- =========================================================
- * Material Dashboard - v1.2.0
- =========================================================
 
- * Product Page: http://www.creative-tim.com/product/material-dashboard
- * Copyright 2017 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
 
- =========================================================
+(function($){
 
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-
-(function() {
-    isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
+ isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
 
     if (isWindows) {
         // if we are on windows OS we activate the perfectScrollbar function
-        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+        $(' .sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
 
-        $('html').addClass('perfect-scrollbar-on');
+        $(' .html').addClass('perfect-scrollbar-on');
     } else {
-        $('html').addClass('perfect-scrollbar-off');
+        $(' .html').addClass('perfect-scrollbar-off');
     }
-})();
+})(jQuery);
+
+
+
+
+
+
+
 
 
 var searchVisible = 0;
@@ -47,7 +42,7 @@ var seq2 = 0,
     durations2 = 500;
 
 
-$(document).ready(function() {
+$(document).ready(function($) {
 
     $sidebar = $('.sidebar');
 
@@ -69,7 +64,7 @@ $(document).ready(function() {
         $(this).parent(".input-group").removeClass("input-group-focus");
     });
 
-});
+})(jQuery);;
 
 $(document).on('click', '.navbar-toggle', function() {
     $toggle = $(this);

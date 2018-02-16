@@ -89,7 +89,8 @@ function ssm_alumni_form_alter(&$form, &$form_state, $form_id){
   return $form;
 }
 
-function ssm_joining_form_submit($form, &$form_state){   
+function ssm_joining_form_submit($form, &$form_state){ 
+pr($form_state,1)  ;
     $afl_date = afl_date();
     $afl_date_splits = afl_date_splits($afl_date);
 
@@ -118,7 +119,7 @@ function ssm_joining_form_submit($form, &$form_state){
 
       if($gen_id){
         drupal_set_message(t('Enrolment is completed'), 'status', FALSE);
-        drupal_goto('user');
+        drupal_goto('user/register-complete/'.$uid);
       }
     }  
 }
